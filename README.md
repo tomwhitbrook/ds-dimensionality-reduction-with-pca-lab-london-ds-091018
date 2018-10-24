@@ -14,7 +14,6 @@ Let's go back to the food price data example that we used in the first lab. We p
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 % matplotlib inline
 ```
 
@@ -297,7 +296,7 @@ plt.plot(eig_val_sorted);
 ```
 
 
-![png](output_26_0.png)
+![png](index_files/index_26_0.png)
 
 
 We can plot a cumulative plot representing how much variance is explained with each new eigenvalue or principal components.
@@ -333,7 +332,7 @@ plt.bar(index, cum_variance);
 ```
 
 
-![png](output_30_0.png)
+![png](index_files/index_30_0.png)
 
 
 Let's say we decided to keep the the PCs with an eigenvalue bigger than 1. This is a popular decision rule, which in this case leads to having 2 principal components. Let's see how we can do that and how to interpret all this, but first, let's move over to scikit learn. This library has very easy-to-use PCA capabilities, and very easy to use. Let's look at how it's done!
@@ -610,7 +609,7 @@ data.head()
 
 
 
-Let's try to interpret what each principal component stands for. You can argue that PC1 represents bread and burgers, let's say "processed foods". PC2 represents oranges and milk, let's call that PC the "non-processed foods". Again, note that both strongly positive and strongly negative PCs are the most important--it's the strength, not the sign, that matters here!
+Let's try to interpret what each principal component stands for. You can argue that PC1 predominantly represents bread, tomatoes and burgers, while PC2 is mainly influenced by (and is therefore representative of) oranges and milk. Again, note that both strongly positive and strongly negative PCs are the most important--it's the strength, not the sign, that matters here!
 
 # 5. The new data
 
